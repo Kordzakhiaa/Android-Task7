@@ -1,7 +1,8 @@
 package com.example.assignment7
 
-import androidx.appcompat.app.AppCompatActivity
+import android.annotation.SuppressLint
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.assignment7.databinding.ActivityMain2Binding
 import com.example.assignment7.extensions.setNetworkImage
@@ -34,6 +35,7 @@ class MainActivity2 : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setData() = with(binding.included) {
         imageView.setNetworkImage(user.avatar)
         fullNameTv.text = "${user.firstName} ${user.lastName}"

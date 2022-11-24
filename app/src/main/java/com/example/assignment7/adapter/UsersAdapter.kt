@@ -1,5 +1,6 @@
 package com.example.assignment7.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ class UsersAdapter(private val users: List<User>, private val onClick: (id: Long
 
     inner class ViewHolder(private val binding: UserLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
+        @SuppressLint("SetTextI18n")
         fun onBind(user: User) = with(binding) {
             imageView.setNetworkImage(user.avatar)
             fullNameTv.text = "${user.firstName} ${user.lastName}"
